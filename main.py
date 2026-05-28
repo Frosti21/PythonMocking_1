@@ -7,7 +7,7 @@ if __name__ == "__main__":
     # Create instances of the real dependencies
     
     # Create an instance of the TemperatureController with real dependencies
-    temp_controller = TemperatureController()
+    temp_controller = TemperatureController(RealTemperatureSensor(), RealFanControl())
 
     while True:
         # Regulate the fan speed based on the current temperature
