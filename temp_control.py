@@ -12,9 +12,9 @@ class TemperatureController:
     Controls a fan's speed based on the current temperature.
     This class depends on external methods to get the temperature and set fan speed.
     """
-    def __init__(self):
-        self.temperature_sensor = RealTemperatureSensor()
-        self.fan_control = RealFanControl()
+    def __init__(self, temperature_sensor, fan_control):
+        self.temperature_sensor = temperature_sensor
+        self.fan_control = fan_control
 
     def regulate_fan_speed(self):
         """
